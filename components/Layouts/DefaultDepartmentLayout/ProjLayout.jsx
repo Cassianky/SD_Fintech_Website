@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./DefaultDepartmentLayout.module.scss";
 import ProjImageComponent from "./ProjImageComponent";
 import Slider from "react-slick";
+import ProjButtonComponent from "./ProjButtonComponent"
 
 const ProjLayout = (props) => {
   const project = props.project;
@@ -23,6 +24,7 @@ const ProjLayout = (props) => {
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
           <div className={styles.projectdetailtext}>{project.details}</div>
+          <ProjButtonComponent />
         </div>
       </div>
     </div>
@@ -44,6 +46,7 @@ const ProjLayout = (props) => {
         <div className={styles.projecttitle}>
           <h3>{project.title}</h3>
           <div className={styles.projectdetailtext}>{project.details}</div>
+          <ProjButtonComponent />
         </div>
       </div>
       <ProjImageComponent project={project} />
