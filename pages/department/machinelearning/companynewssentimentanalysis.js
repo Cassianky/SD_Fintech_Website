@@ -40,7 +40,8 @@ const Graph = (items) => {
   return (
     <div className={styles.main}>
       <span style={{"font-weight":"700"}}>
-        Sentinment Scores
+        Sentinment Scores 
+        ({items.typeFilter})
       </span>
       <div className={styles.card}>
         <ResponsiveContainer>
@@ -282,8 +283,7 @@ const MachineLearningDashboard = (props) => {
             // dateFormat="dd/mm/yy"
             />
             {/* <App/> */}
-            <Graph data={headlinesScores}/>
-
+            <Graph data={headlinesScores} typeFilter={typeFilter}/>
         </Row>
 
         <Row>
