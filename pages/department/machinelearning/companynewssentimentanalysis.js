@@ -106,13 +106,11 @@ const MachineLearningDashboard = (props) => {
 
   //the 0 inside useState specifies the initial value of the component
   const [typeFilter, setTypeFilter] = useState('Apple');
-  var d1 = new Date();
-  d1.setDate(d1.getDate()-430); //http://127.0.0.1:8000/positive_scores/Apple/2020-02-22/2021-02-21
+  var d1 = new Date(2020,0,1);
+  // d1.setDate(d1.getDate()-430); //http://127.0.0.1:8000/positive_scores/Apple/2020-02-22/2021-02-21
   const [startDate, setStartDate] = useState(d1);
   var d2 = new Date();
-  d2.setDate(d2.getDate()-100) //http://127.0.0.1:8000/positive_scores/Apple/2020-02-22/2021-02-21
   const [endDate, setEndDate] = useState(d2);
- 
 
 
 //for positive score
@@ -127,7 +125,7 @@ const MachineLearningDashboard = (props) => {
     };
  
     fetchData();
-  }, []);
+  }, [typeFilter, startDate, endDate]);
 
   //for neutral score
   useEffect(() => {
@@ -141,7 +139,7 @@ const MachineLearningDashboard = (props) => {
     };
  
     fetchData();
-  }, []);
+  }, [typeFilter, startDate, endDate]);
 
   //for negative score
   useEffect(() => {
@@ -155,7 +153,7 @@ const MachineLearningDashboard = (props) => {
     };
  
     fetchData();
-  }, []);
+  }, [typeFilter, startDate, endDate]);
 
   //for average sentiment
   useEffect(() => {
@@ -169,7 +167,7 @@ const MachineLearningDashboard = (props) => {
     };
  
     fetchData();
-  }, []);
+  }, [typeFilter, startDate, endDate]);
 
     //for positive headlines
     useEffect(() => {
@@ -184,7 +182,7 @@ const MachineLearningDashboard = (props) => {
       };
    
       fetchData();
-    }, []);
+    }, [typeFilter, startDate, endDate]);
 
     useEffect(() => {
       const fetchData = () => {
@@ -198,7 +196,7 @@ const MachineLearningDashboard = (props) => {
       };
    
       fetchData();
-    }, []);
+    }, [typeFilter, startDate, endDate]);
 
     useEffect(() => {
       const fetchData = () => {
@@ -212,7 +210,7 @@ const MachineLearningDashboard = (props) => {
       };
    
       fetchData();
-    }, []);
+    }, [typeFilter, startDate, endDate]);
 
     useEffect(() => {
       const fetchData = () => {
@@ -226,7 +224,7 @@ const MachineLearningDashboard = (props) => {
       };
    
       fetchData();
-    }, []);
+    }, [typeFilter, startDate, endDate]);
   
 
   return (
